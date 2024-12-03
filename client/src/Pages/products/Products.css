@@ -1,0 +1,335 @@
+.products-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    background: #ffffff;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease;
+    border: 1px solid #e0e0e0;
+  }
+
+  .product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .product-header h3 {
+    margin: 0;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .delete-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+
+  .delete-btn:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+  }
+
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+  }
+
+  .detail-full {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px 0;
+  }
+
+  .label {
+    color: #666666;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .value {
+    color: #333333;
+    font-size: 14px;
+  }
+
+  .loading {
+    text-align: center;
+    padding: 20px;
+    color: #666666;
+  }
+
+  .products-page {
+    display: flex;
+    min-height: 100vh;
+    background: #f8f9fa;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px;
+    background: #ffffff;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .import-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+  }
+
+  .import-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #0bbe0e;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(65, 84, 241, 0.2);
+  }
+
+  .import-btn:hover {
+    background: #0bbe0e;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(65, 84, 241, 0.3);
+    color: #ffffff;
+  }
+
+  .add-product-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #4154f1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(65, 84, 241, 0.2);
+  }
+
+  .add-product-btn:hover {
+    background: #3b4cda;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(65, 84, 241, 0.3);
+    color: white;
+  }
+
+  .search-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem 0;
+  }
+
+  .search-input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 12px 40px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #333333;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: #4154f1;
+    box-shadow: 0 0 0 2px rgba(65, 84, 241, 0.25);
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666666;
+  }
+
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-header h2 {
+    color: #333333;
+    margin: 0;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    color: #666666;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    display: block;
+    color: #333333;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #333333;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 70px;
+    }
+
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  /* Add these styles for the export button */
+  .export-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #0bbe0e;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(65, 84, 241, 0.2);
+  }
+
+  .export-btn:hover {
+    background: #0bbe0e;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(65, 84, 241, 0.3);
+    color: #ffffff;
+  }
+
+  /* Add these styles for the edit button */
+  .edit-btn {
+    
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #4154f1;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: .5px;
+  }
+
+  .edit-btn:hover {
+    background: #3b4cda;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(65, 84, 241, 0.3);
+    color: #ffffff;
+  }
+
+  .edit-btn i {
+    font-size: 14px;
+  }

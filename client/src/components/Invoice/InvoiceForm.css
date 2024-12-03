@@ -1,0 +1,66 @@
+.content-wrapper {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+}
+
+.card-title {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #495057;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.table-responsive {
+  min-height: 300px;
+}
+
+.table th {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+}
+
+.table tr:hover {
+  cursor: pointer;
+  background-color: #f8f9fa;
+}
+
+.table-primary {
+  --bs-table-bg: rgba(13, 110, 253, 0.1);
+}
+
+.form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+} 

@@ -1,0 +1,140 @@
+.sidebar, 
+div.sidebar,
+.sidebar.bg-dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background: #ffffff !important;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-right: 1px solid #e0e0e0;
+  color: #333333;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  margin-bottom: 30px;
+}
+
+.logo-container i {
+  color: #4154f1;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.logo-container span {
+  color: #333333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Navigation Items */
+.sidebar-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 4px 16px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: #666666;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  background: #f8f9fa;
+  color: #4154f1;
+  transform: translateX(5px);
+}
+
+.nav-link.active {
+  background: #f8f9fa;
+  color: #4154f1;
+}
+
+.nav-link i {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+  margin-right: 12px;
+}
+
+.nav-link span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Active Link Styles */
+.nav-item .nav-link.active {
+  position: relative;
+}
+
+.nav-item .nav-link.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #4154f1;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+    padding: 20px 0;
+  }
+
+  .logo-container span {
+    display: none;
+  }
+
+  .nav-link span {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 12px;
+    justify-content: center;
+  }
+
+  .nav-link i {
+    margin: 0;
+    font-size: 24px;
+  }
+}
+
+/* Optional: Add subtle shadow */
+.sidebar {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Optional: Add subtle border for menu items */
+.nav-item {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin: 8px 16px;
+}
+
+/* Optional: Add hover effect */
+.nav-link:hover {
+  box-shadow: 0 0 15px rgba(65, 84, 241, 0.1);
+}
