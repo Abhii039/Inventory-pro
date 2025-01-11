@@ -18,9 +18,9 @@ An advanced inventory management system that simplifies product management and i
 
 ## 🛠️ Technologies Used
 
-- **Frontend**: React.js (or your frontend framework).  
-- **Backend**: Node.js / .NET Core (mention specific backend).  
-- **Database**: MongoDB / SQL Server / MySQL (mention specific database).  
+- **Frontend**: React.js   
+- **Backend**: Node.js 
+- **Database**: MongoDB   
 - **Libraries**:  
   - **ExcelJS**: For handling Excel import/export.  
   - **PDFKit**: For generating PDFs.  
